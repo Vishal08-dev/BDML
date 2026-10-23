@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitVision | CNN Digit Recognition</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <h1>DigitVision</h1>
+        <p class="subtitle">CNN-Based Handwritten Digit Recognition</p>
+
+        <section class="workspace">
+            <div>
+                <h2>Draw a digit</h2>
+                <canvas id="canvas" width="280" height="280"></canvas>
+
+                <div class="buttons">
+                    <button id="predictBtn">Predict Digit</button>
+                    <button id="clearBtn" class="secondary">Clear</button>
+                </div>
+            </div>
+
+            <div class="result">
+                <h2>Prediction</h2>
+                <div id="digit">?</div>
+                <p id="confidence">Draw a digit to get started.</p>
+            </div>
+        </section>
+
+        <p class="footer">Powered by TensorFlow, Keras and Flask</p>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
